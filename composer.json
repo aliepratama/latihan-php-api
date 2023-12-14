@@ -1,0 +1,13 @@
+{
+    "name": "user/latihan-php-api",
+    "type": "project",
+    "authors": [
+        {
+            "name": "aliepratama",
+            "email": "aliepratama2@gmail.com"
+        }
+    ],
+    "require": {
+        "rafaelwendel/phpsupabase" : "^0.0.1"
+    }
+}
