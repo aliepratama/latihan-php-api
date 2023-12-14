@@ -8,6 +8,8 @@
         }
     ],
     "require": {
+        "php": "^8.1",
+        "tracy/tracy": "^2.0",
         "rafaelwendel/phpsupabase" : "^0.0.1"
     }
 }

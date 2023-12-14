@@ -1,11 +1,16 @@
 <?php
 
-require "../vendor/autoload.php";
+require_once __DIR__ . "/../vendor/autoload.php";
 
-
-$env = parse_ini_file('../.env');
-$db_key = $env["DB_KEY"];
-$db_url = $env["DB_URL"];
+try{
+    $env = parse_ini_file('../.env');
+    $db_key = $env["DB_KEY"];
+    $db_url = $env["DB_URL"];
+}
+catch(Exception $e){
+    $db_key = $_ENV["DB_KEY"];
+    $db_url = $_ENV["DB_URL"];
+}
 
 $service = new PHPSupabase\Service(
     $db_key, $db_url
